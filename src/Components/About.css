@@ -1,0 +1,219 @@
+#About{
+    /* border: 1px solid red; */
+    background: linear-gradient(90deg, rgba(43,45,66,1) 23%, rgba(141,153,174,1) 23%, rgba(237,242,244,1) 78%);
+    background: rgb(13,13,13);
+    background: -moz-linear-gradient(90deg, rgba(13,13,13,1) 29%, rgba(24,24,24,0.9954832274706757) 29%);
+    background: -webkit-linear-gradient(90deg, rgba(13,13,13,1) 29%, rgba(24,24,24,0.9954832274706757) 29%);
+    background: linear-gradient(90deg, rgba(13,13,13,1) 29%, rgba(24,24,24,0.9954832274706757) 29%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0d0d",endColorstr="#181818",GradientType=1);   
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow: hidden;
+  /* border: .99px solid rgba(128, 128, 128, 0.329); */
+  padding: 8px;
+
+}
+
+#About>.typography{
+
+    width: 100%;
+    z-index: 999;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+#About>.typography > h1{
+    color: var(---bg2---);
+}
+.About-card{
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    place-items:center;
+    margin-top: 13px;
+    /* background-color: var(---bg1---); */
+    padding: 8px;
+  
+}
+.About-img{
+    display: grid;
+    place-items: center;
+   
+}
+.About-img>img{
+    width: 80%;
+    box-shadow: #474747 -5px 5px, #6c6c6c -10px 10px, #121217c8 -15px 15px, var(---bg2---) -20px 20px, var(---bg3---) -25px 25px;
+
+}
+.bounceAni{
+    transform-origin: bottom;
+    animation: BounceAni 2s cubic-bezier(0.83, 0, 0.17, 1) 0s  normal  forwards;
+}
+.About-card-typo{
+    color: var(---bg2---);
+    /* border: 1px solid red; */
+    padding: 3px;
+  
+}
+.typo-card{
+    /* border: 1px solid white; */
+    padding: 8px;
+    /* margin: 8px; */
+    position: relative;
+    border-bottom: .99px solid rgba(128, 128, 128, 0.405);
+   
+}
+.About-card-typo>.typo-card::before{
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  background-color:var(---bg2---);
+}
+.About-card-typo>.typo-card::after{
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50px;
+  left: -33px;
+  background-color: #afaeae;
+}
+.About-card-typo>.typo-card:hover::after{
+  background-color: greenyellow !important;
+}
+.typo-card-body{
+    /* border: 1px solid red; */
+    padding: 8px;
+    font-size: var(---typoFontSize---);
+}
+.typo-card-body>p{
+    opacity: 0.6;
+}
+.About-typo-subTitle{
+    color: var(---bg2---);
+    opacity: 1;
+    font-family: var(---titleFont---);
+}
+/* Copy this code after the above code */
+@keyframes BounceAni {
+    /* Copy this code after the above code */ 
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 1;
+      transform: translateY(-45px);
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    40% {
+      animation-timing-function: ease-in;
+      transform: translateY(-24px);
+    }
+  
+    65% {
+      animation-timing-function: ease-in;
+      transform: translateY(-12px);
+    }
+  
+    82% {
+      animation-timing-function: ease-in;
+      transform: translateY(-6px);
+    }
+  
+    93% {
+      animation-timing-function: ease-in;
+      transform: translateY(-4px);
+    }
+  
+    25%,
+    55%,
+    75%,
+    87% {
+      animation-timing-function: ease-out;
+      transform: translateY(0px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+
+
+  @media  (max-width:577px) {
+    .About-card-typo>.typo-card::after,.About-card-typo>.typo-card::before{
+      display: none;
+    }
+    .About-card{
+        grid-template-columns: auto auto;
+        /* border: 1px solid red; */
+        grid-auto-flow: column;
+        place-content: center;
+        padding: 5px;
+        position: relative;
+    }
+    .About-img{
+   display: none;
+    }
+  
+    .About-card-typo{
+/* border: 1px solid green; */
+z-index: 4;
+    }
+  
+  }
+  
+  @media (max-width: 769px) {
+    #About{
+        overflow: hidden;
+    }
+    .About-card-typo>.typo-card::after,.About-card-typo>.typo-card::before{
+      display: none;
+    }
+        .About-card{
+            grid-template-columns: auto auto;
+            /* border: 1px solid red; */
+            grid-auto-flow: column;
+            place-content: center;
+            padding: 5px;
+            position: relative;
+        }
+       
+      
+        .About-card-typo{
+    /* border: 1px solid green; */
+    z-index: 4;
+    text-align: center;
+        }
+      
+  }
+  @media (min-width: 769px) and (max-width: 991.98px) {
+    /* Your CSS rules for tablets */
+    .About-card{
+        grid-template-columns: auto auto;
+        /* border: 1px solid red; */
+        grid-auto-flow: column;
+        place-content: center;
+        padding: 5px;
+        position: relative;
+    }
+    .About-card-typo>.typo-card::after,.About-card-typo>.typo-card::before{
+      display: none;
+    }
+    
+    .About-card-typo{
+        margin-top: 15px;
+        text-align: center;
+    }
+  
+   
+  }

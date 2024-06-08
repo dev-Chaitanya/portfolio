@@ -1,0 +1,102 @@
+#Work {
+  background: linear-gradient(
+    90deg,
+    rgba(43, 45, 66, 1) 23%,
+    rgba(141, 153, 174, 1) 23%,
+    rgba(237, 242, 244, 1) 78%
+  );
+  background: rgb(13, 13, 13);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(13, 13, 13, 1) 29%,
+    rgba(24, 24, 24, 0.9954832274706757) 29%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(13, 13, 13, 1) 29%,
+    rgba(24, 24, 24, 0.9954832274706757) 29%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(13, 13, 13, 1) 29%,
+    rgba(24, 24, 24, 0.9954832274706757) 29%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0d0d",endColorstr="#181818",GradientType=1);
+  /* height: 100vh; */
+display: grid;
+  padding: 8px;
+  gap: 40px !important;
+  /* border: 1px solid red; */
+}
+.Work-contaienr{
+  /* border: 1px solid red; */
+  padding: 2px;
+}
+.Work-card-box {
+    /* border: 1px solid red; */
+    width: 80%;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding: 18px !important;
+  gap: 40px;
+}
+.workCard{
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 30px;
+  position: relative;
+  transform-style: preserve-3d !important;
+  transition: transform  200ms !important;
+  transition:  all 500ms ease !important;
+  pointer-events: auto !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.15),
+    0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.work-card-title{
+  position: absolute;
+  bottom: 12px;
+  left: 13px;
+color: var(---bg2---);
+  z-index: 99;
+  font-family: var(---titleFont---);
+}
+
+.workCard:hover{
+  pointer-events: auto !important;
+  cursor: pointer;
+  z-index: 999;
+transform: scale3d(1.2,1.2,2) !important;
+}
+.illustrate{
+  margin: auto;
+}
+.illustrate>*>*:disabled{
+  color: white !important;
+  opacity: 0.7 !important;
+}
+
+
+@media (max-width:400px) {
+  .workCard{
+    width: 100%;
+  }
+}
+@media  (max-width:577px) {
+.illustrate{
+  display: none;
+}
+
+}
+@media (max-width: 769px) {
+
+  .illustrate{
+    display: none;
+  }
+}

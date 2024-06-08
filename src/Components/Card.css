@@ -1,0 +1,136 @@
+#container{
+    /* border: 1px solid red; */
+    background: transparent;
+    border-radius:30px;
+    position: relative;
+height: 100% !important;
+width: 100% !important;
+}
+.flipCard{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.card{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    /* border-radius:30px; */
+    
+}
+.card-Frontside::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('/public/profile.jpg'); 
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-position-x: left;
+
+}
+
+.card-Frontside,.card-Backside{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* border-radius:30px; */
+    backface-visibility: hidden;
+    /* box-shadow: rgba(208, 208, 208, 0.732) 0px 20px 30px -10px; */
+
+}
+.card-Frontside{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    transition: all 2s;
+
+}
+.card-Backside{
+    background-color: black;
+text-wrap: wrap;
+white-space: none;
+font-size: .89rem;
+}
+.card-Frontside>img{
+    width: 100%;
+    /* border-radius:30px; */
+}
+.bar{
+/* border: 1px solid red; */
+ position: absolute;
+ bottom: 0;
+ width:  30%;
+ padding: 5px;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ /* background-color: rgba(255, 255, 255, 0.588); */
+}
+.bar::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.804);
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, 0.355);
+    filter: blur(71px);
+    -webkit-filter: blur(71px);
+    overflow: hidden;
+}
+.flip-btn{
+    float: right;
+}
+.flip-btn>*{
+    cursor: pointer;
+    color: white !important;
+    background: transparent !important;
+}
+.bar-social-btn{
+    /* border: 5px double  !important; */
+    /* background-color: white !important; */
+    /* background: url('/public/profile.jpg'); */
+    /* color: blue !important; */
+    width: max-content;
+    height:60px;
+   margin: 5px !important;
+   /* padding: 3px !important; */
+   position:  relative !important;
+   z-index: 99 !important;
+}
+
+.bar-social-btn>*{
+ /* pointer-events: auto !important; */
+    color: white !important;
+    padding: 0 !important;
+    border-radius: 100% !important;
+   transform: scale(2) translateX(-3px) !important;
+   transition: all 500ms ease;
+}
+.bar-social-btn>*:hover{
+    transition: all 500ms ease !important;
+    color: var(---b2---) !important;
+}
+.card-Backside{
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 999;
+}
+
+
+/* animation  card*/
+
+@media (max-width:400px) {
+    .card-Backside{
+        overflow: scroll;
+    }
+}
+     

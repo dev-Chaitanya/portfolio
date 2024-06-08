@@ -1,0 +1,12 @@
+.custom-input input,
+.custom-input textarea {
+  background-color: transparent !important;
+  border-bottom: 1px solid white !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+
+.custom-input .MuiFilledInput-root:before,
+.custom-input .MuiFilledInput-root:after {
+  display: none;
+}
